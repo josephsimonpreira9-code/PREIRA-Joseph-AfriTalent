@@ -118,3 +118,33 @@ footer{
     padding:20px;
     margin-top:30px;
 }
+/* Styles spécifiques pour les sections */
+.hero{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:60px;
+    gap:30px;
+}
+
+.bento-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.bento-card{
+    background:#f8f9fa;
+    padding:30px;
+    border-radius:15px;
+    font-weight:bold;
+}
+
+.card{
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
