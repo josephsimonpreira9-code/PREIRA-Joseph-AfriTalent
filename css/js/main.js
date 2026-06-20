@@ -37,3 +37,54 @@ topBtn.addEventListener("click", () => {
         behavior: "smooth"
     });
 });
+const counters = document.querySelectorAll(".counter");
+
+const startCounter = (counter) => {
+
+    const target = +counter.getAttribute("data-target");
+    let count = 0;
+
+    const updateCounter = () => {
+
+        const increment = target / 100;
+
+        if (count < target) {
+            count += increment;
+            counter.innerText = Math.ceil(count);
+            setTimeout(updateCounter, 20);
+        } else {
+            counter.innerText = target;
+        }
+    };
+
+    updateCounter();
+};
+
+const observerCounter = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+            startCounter(entry.target);
+            observerCounter.unobserve(entry.target);
+        }
+
+    });
+
+});
+
+counters.forEach(counter => {
+    observerCounter.observe(counter);
+});
+contst fadeElements = document.querySelectorAll(".fade-in");
+
+const observerFade = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        }
+    });
+});
+fadeElements.forEach(el => {
+    observerFade.observe(el);
+});
