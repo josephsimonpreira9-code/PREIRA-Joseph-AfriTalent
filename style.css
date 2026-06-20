@@ -4,4 +4,43 @@ margin: 0;
 font-family: arial;
 padding: o;	
 }
+/* Tablette */
+@media (max-width: 768px){
+
+    .hero{
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .bento-grid{
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Mobile */
+@media (max-width: 375px){
+
+    h1{
+        font-size: 2rem;
+    }
+
+    .hero{
+        padding: 20px;
+    }
+
+    .btn-group{
+        display:flex;
+        flex-direction:column;
+        gap:10px;
+    }
+}
+
+/* Grand écran */
+@media (min-width: 1200px){
+
+    .container{
+        max-width: 1140px;
+    }
+}
 
