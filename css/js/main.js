@@ -1,6 +1,6 @@
 const themeToggle = document.getElementById("themeToggle");
 
-if(localStorage.getItem("theme") === "dark"){
+if (localStorage.getItem("theme") === "dark") {
     document.body.classList.add("dark-mode");
 }
 
@@ -8,10 +8,10 @@ themeToggle.addEventListener("click", () => {
 
     document.body.classList.toggle("dark-mode");
 
-    if(document.body.classList.contains("dark-mode")){
-        localStorage.setItem("theme","dark");
-    }else{
-        localStorage.setItem("theme","light");
+    if (document.body.classList.contains("dark-mode")) {
+        localStorage.setItem("theme", "dark");
+    } else {
+        localStorage.setItem("theme", "light");
     }
 
 });
@@ -94,7 +94,7 @@ const counters = document.querySelectorAll(".counter");
 const counterObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
 
-        if(entry.isIntersecting){
+        if (entry.isIntersecting) {
 
             const counter = entry.target;
             const target = +counter.dataset.target;
@@ -105,11 +105,11 @@ const counterObserver = new IntersectionObserver((entries) => {
 
                 const increment = target / 100;
 
-                if(count < target){
+                if (count < target) {
                     count += increment;
                     counter.innerText = Math.ceil(count);
-                    setTimeout(updateCounter,20);
-                }else{
+                    setTimeout(updateCounter, 20);
+                } else {
                     counter.innerText = target;
                 }
             };
@@ -132,7 +132,7 @@ const fadeObserver = new IntersectionObserver((entries) => {
 
     entries.forEach(entry => {
 
-        if(entry.isIntersecting){
+        if (entry.isIntersecting) {
             entry.target.classList.add("show");
         }
 
@@ -154,13 +154,13 @@ filterButtons.forEach(button => {
 
         freelancers.forEach(card => {
 
-            if(filter === "all"){
+            if (filter === "all") {
                 card.style.display = "block";
             }
-            else if(card.classList.contains(filter)){
+            else if (card.classList.contains(filter)) {
                 card.style.display = "block";
             }
-            else{
+            else {
                 card.style.display = "none";
             }
 
@@ -170,47 +170,47 @@ filterButtons.forEach(button => {
 });
 const form = document.getElementById("contactForm");
 
-if(form){
+if (form) {
 
-form.addEventListener("submit", function(e){
+    form.addEventListener("submit", function (e) {
 
-    e.preventDefault();
+        e.preventDefault();
 
-    let valid = true;
+        let valid = true;
 
-    const name = document.getElementById("name");
-    const email = document.getElementById("email");
-    const message = document.getElementById("message");
+        const name = document.getElementById("name");
+        const email = document.getElementById("email");
+        const message = document.getElementById("message");
 
-    document.getElementById("nameError").innerText = "";
-    document.getElementById("emailError").innerText = "";
-    document.getElementById("messageError").innerText = "";
+        document.getElementById("nameError").innerText = "";
+        document.getElementById("emailError").innerText = "";
+        document.getElementById("messageError").innerText = "";
 
-    if(name.value.trim() === ""){
-        document.getElementById("nameError").innerText = "Nom obligatoire";
-        valid = false;
-    }
+        if (name.value.trim() === "") {
+            document.getElementById("nameError").innerText = "Nom obligatoire";
+            valid = false;
+        }
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    if(!emailRegex.test(email.value)){
-        document.getElementById("emailError").innerText = "Email invalide";
-        valid = false;
-    }
+        if (!emailRegex.test(email.value)) {
+            document.getElementById("emailError").innerText = "Email invalide";
+            valid = false;
+        }
 
-    if(message.value.trim().length < 20){
-        document.getElementById("messageError").innerText =
-        "Le message doit contenir au moins 20 caractères";
-        valid = false;
-    }
+        if (message.value.trim().length < 20) {
+            document.getElementById("messageError").innerText =
+                "Le message doit contenir au moins 20 caractères";
+            valid = false;
+        }
 
-    if(valid){
-        document.getElementById("successMessage")
-        .classList.remove("d-none");
+        if (valid) {
+            document.getElementById("successMessage")
+                .classList.remove("d-none");
 
-        form.reset();
-    }
+            form.reset();
+        }
 
-});
+    });
 
 }

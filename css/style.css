@@ -1,150 +1,152 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
+body {
     font-family: Arial, sans-serif;
-    background-color:#f5f7fa;
-    color:#333;
-    line-height:1.6;
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
 }
 
 /* En-tête */
-header{
-    background:#0d6efd;
-    color:white;
-    padding:20px;
-    text-align:center;
+header {
+    background: #0d6efd;
+    color: white;
+    padding: 20px;
+    text-align: center;
 }
 
-header h1{
-    margin-bottom:10px;
+header h1 {
+    margin-bottom: 10px;
 }
 
 /* Menu */
-nav{
-    margin-top:10px;
+nav {
+    margin-top: 10px;
 }
 
-nav a{
-    color:white;
-    text-decoration:none;
-    margin:0 15px;
-    font-weight:bold;
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
 }
 
-nav a:hover{
-    text-decoration:underline;
+nav a:hover {
+    text-decoration: underline;
 }
 
 /* Sections */
-section{
-    padding:40px 20px;
-    max-width:1200px;
-    margin:auto;
+section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
 }
 
 /* Boutons */
-.btn{
-    display:inline-block;
-    background:#0d6efd;
-    color:white;
-    padding:12px 20px;
-    text-decoration:none;
-    border-radius:5px;
-    margin-top:10px;
+.btn {
+    display: inline-block;
+    background: #0d6efd;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
 }
 
-.btn:hover{
-    background:#084298;
+.btn:hover {
+    background: #084298;
 }
 
 /* Cartes freelances */
-.card{
-    background:white;
-    padding:20px;
-    margin:15px;
-    border-radius:10px;
-    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+.card {
+    background: white;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.card h3{
-    color:#0d6efd;
+.card h3 {
+    color: #0d6efd;
 }
 
 /* Grille */
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
 }
 
 /* Formulaire */
-form{
-    background:white;
-    padding:20px;
-    border-radius:10px;
-    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-input, textarea{
-    width:100%;
-    padding:10px;
-    margin:10px 0;
-    border:1px solid #ccc;
-    border-radius:5px;
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-button{
-    background:#0d6efd;
-    color:white;
-    border:none;
-    padding:12px 20px;
-    border-radius:5px;
-    cursor:pointer;
+button {
+    background: #0d6efd;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-button:hover{
-    background:#084298;
+button:hover {
+    background: #084298;
 }
 
 /* Pied de page */
-footer{
-    background:#212529;
-    color:white;
-    text-align:center;
-    padding:20px;
-    margin-top:30px;
+footer {
+    background: #212529;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
 }
+
 /* Styles spécifiques pour les sections */
-.hero{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:60px;
-    gap:30px;
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px;
+    gap: 30px;
 }
 
-.bento-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:20px;
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
 
-.bento-card{
-    background:#f8f9fa;
-    padding:30px;
-    border-radius:15px;
-    font-weight:bold;
+.bento-card {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 15px;
+    font-weight: bold;
 }
 
-.card{
-    transition:0.3s;
+.card {
+    transition: 0.3s;
 }
 
-.card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 10px 20px rgba(0,0,0,0.2);
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
